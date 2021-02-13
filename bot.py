@@ -6,7 +6,7 @@ from telebot import apihelper
 import random
 from IPython import embed
 
-apihelper.proxy = {'https':'socks5h://localhost:9050'}
+#apihelper.proxy = {'https':'socks5h://localhost:9050'}
 
 bot = telebot.TeleBot(config.token)
 con=sqlite3.connect("db.db", check_same_thread=False)
