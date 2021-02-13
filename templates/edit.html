@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/my_js.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+  <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+</head>
+<header>
+  <h1>Nest Cooking Admin Panel</h1>
+</header>
+<body>
+  <br></br>
+  <div class="container">
+    <input class="form-control mb-4" id="tableSearch" type="text"
+    placeholder="Type something to search list items">
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Название</th>
+          <th>Коментарий</th>
+          <th>Тип</th>
+          <th>Рецепт</th>
+          <th>Продукты</th>
+          <th>Действие</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        {%for e in food%}
+
+        <tr>
+          <td>{{e[0]}}</td>
+          <td>{{e[1]}}</td>
+          <td>{{e[2]}}</td>
+          <td>{{e[3]}}</td>
+          <td>{{e[4]}}</td>
+          <td>
+            <p>
+              <a href="/{{e[6]}}/del">Удалить</a>
+            </p>
+            <p>
+              <a href="/{{e[6]}}/edit">Редактировать</a>
+            </p>
+          </tr>
+
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+  </body>
+<script type="text/javascript">// Filter table
+
+$(document).ready(function(){
+  $("#tableSearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});</script>
+</html>

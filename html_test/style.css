@@ -1,0 +1,158 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	color: #933010;
+	background: #f9f5f8;
+	line-height: 1;
+	font-family: 'Balsamiq Sans', cursive;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+header {
+	background: url(фон.jpg) center center no-repeat;
+	color: #ffffff;
+	text-align: center;
+	background-size: cover; 
+	padding: 135px 20px 90px 20px  ;	
+}
+header>h1	{
+	font-size: 3.75em	;
+	font-family: 'Dancing Script', cursive;
+	margin-bottom: 20px;
+}
+header>h3	{
+	font-size: 1.25em	;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 50px;
+
+}
+header>p	{
+	font-size: 0.75em	;
+	font-family: 'Balsamiq Sans', cursive;
+	padding: 15px;
+}
+.my_class{
+	background: rgba(255,255,255,0.60);
+	display: table;
+	padding: 20px;
+	margin:0 auto;
+	border-radius: 5px;
+}
+.my_class input{
+	float: left;
+
+}
+.my_class input[type='text'],.my_class input[type='email']
+{
+	padding: 0;
+	border: 0;
+	width: 320px;
+	margin-right:10px;
+	font-family: 'Balsamiq Sans';
+	font-size:1em;
+	padding: 12px 20px 13px 20px;
+	box-sizing: border-box;
+
+
+
+
+}
+.my_class input[type='submit']
+{
+	background: #0055ff;
+	border: 0;
+	color: white;
+	font-size: 1.25em;
+	font-family: 'Balsamiq Sans', cursive;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+
+
+}
+article {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 50px 20px;
+
+
+
+} 
+article>h1{
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 25px;
+}
+article>p{
+	font-size: 1,25em;
+	margin-bottom: 25px;
+}
+
+.img_l {
+	float: left;
+	margin: 0 30px 20px 0;
+}
+
+@media screen and (max-width: 950px){
+	.my_class input[type='text'],.my_class input[type='email']
+{
+	width: 260px;
+	
+}
+}
+@media screen and (max-width: 820px){
+	.my_class input[type='text'],.my_class input[type='email']
+{
+	float: none;
+	width: 320px;
+	display: block;
+	margin: 0;
+	margin-bottom: 7px;
+	
+
+	
+}
+}

@@ -1,0 +1,258 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   */
+
+   html, body, div, span, applet, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,
+   del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, embed, 
+   figure, figcaption, footer, header, hgroup, 
+   menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+   	margin: 0;
+   	padding: 0;
+   	border: 0;
+   	font-size: 100%;
+   	font: inherit;
+   	vertical-align: baseline;
+
+   }
+   /* HTML5 display-role reset for older browsers */
+   article, aside, details, figcaption, figure, 
+   footer, header, hgroup, menu, nav, section {
+   	display: block;
+   }
+   body {
+   	color: #933010;
+    background: white;
+    line-height: 1;
+    font-family: 'Balsamiq Sans', cursive;
+
+  }
+  .body{
+    background:url(../img/test.1.jpg) center center repeat;
+    background-repeat: repeat-x repeat-y;
+  }
+
+  .flashes {
+   list-style: none;
+   margin: 0 auto;
+   text-align: center;
+   color: black;
+ }
+
+ blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+header {
+  background: url(../img/test.1.jpg) center center repeat;
+  background-repeat: repeat-x;
+  color: #000000;
+  text-align: center;
+  height: 70px;
+  padding: 40px  ;	
+}
+header>h1	{
+  background: rgba(0,0,0,0.60);
+  font-size: 3.75em	;
+  font-family: 'Dancing Script', cursive;
+  color: #f0f0f0;
+  width: 750px;
+  margin:0 auto;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+section
+{
+  margin:auto;
+}
+section>h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.25em;
+  color: #000000;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+.select{
+  margin: 20px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.Name{
+  margin: 20px auto;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+.Name  input[type='text']{
+  font-family: 'Balsamiq Sans';
+  width: 750px;
+  height: 25px;
+}
+.all{
+  margin: 20px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.prod {
+  width: 250px;
+  height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.rec{	
+  width: 500px;
+  height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+
+}
+
+.Button{
+  margin: 20px auto;
+  text-align: center;
+}
+
+.Button input[type="submit"]{
+  background: #909090;
+  border: 0;
+  border-radius: 10px;
+  margin: 20px auto;
+  color: black;
+  font-size: 1.25em;
+  font-family: 'Balsamiq Sans', cursive;
+  padding: 5px;
+  cursor: pointer;
+}
+select{
+  width: 750px;
+  height: 25px;
+  border-radius: 10px;
+  font-family: 'Balsamiq Sans';
+}
+
+
+.login {
+  align-items: center; 
+  justify-content: center; 
+  background: rgba(0,0,0,0.70);
+  width: 350px;
+  height: 250px;
+  margin:150px auto;
+  border-radius: 20px;
+}
+
+.login input[type='text'],.login input[type='password']
+{
+  margin:10px auto;
+  width: 200px;
+  height: 35px;
+  text-align: center;
+  margin:10px 75px;
+  border-radius: 20px;
+
+
+
+
+
+}
+
+.login>h1 {
+ font-size: 2em;
+ text-align: center;
+ padding: 20px 0px 0px 0px;
+ color: white;
+ font-family: 'Balsamiq Sans', cursive;
+
+}
+
+.login input[type='submit']
+{
+  background: #777777;
+  border-radius: 20px;
+  color: black;
+  font-size: 1.25em;
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: 700;
+  padding: 10px 10px 10px 10px ;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin: 10px 75px;
+
+
+}
+
+
+
+.menu_action {
+  align-items: center; 
+  justify-content: center; 
+  background: rgba(0,0,0,0.70);
+  width: 450px;
+  height: 200px;
+  margin:150px auto;
+  border-radius: 20px;
+}
+
+.menu_action>h1 {
+ font-size: 2em;
+ text-align: center;
+ padding: 20px 0px 0px 0px;
+ color: white;
+ font-family: 'Balsamiq Sans', cursive;
+
+}
+.menu_action p
+{
+  align-items: center; 
+  margin:40px;
+}
+.menu_action a
+{
+  background: #777777;
+  border-radius: 20px;
+  color: black;
+  font-size: 1.25em;
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: 700px;
+  padding: 10px;
+  cursor: pointer;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  margin: 30px;
+
+
+}
