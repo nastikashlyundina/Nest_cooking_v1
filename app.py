@@ -30,6 +30,14 @@ def get_user():
 		return (True, login)
 	return (False, None)
 
+@app.route('/', methods=['GET'])
+def null():
+	if request.method == 'GET':
+		if get_user()[0]:
+			return redirect(url_for('menu_action'))
+		else:
+			return redirect(url_for('login'))
+
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -48,6 +56,8 @@ def login():
 			if check_password_hash(a[0][0],passw):
 				session_login(username)
 				return redirect(url_for('menu_action'))
+			else:
+				return render_template('login.html')
 
 		else:
 			return render_template('login.html')
@@ -58,7 +68,9 @@ def login():
 	else:
 		return abort(405)
 
+
 @app.route('/add',methods=['GET', 'POST'])
+@login_required
 def index():
 	if request.method == 'GET':
 		login,user=get_user()
@@ -86,11 +98,15 @@ def index():
 		flash('Рецепт Добавлен!')
 		return(redirect(url_for("index")))
 
+
 @app.route('/menu_action',methods=['GET', 'POST'])
+@login_required
 def menu_action():
 	return render_template('menu.html')
 
+
 @app.route('/search',methods=['GET', 'POST'])
+@login_required
 def edit():
 	cur=con.cursor()
 	cur.execute("SELECT * from Food")
@@ -99,7 +115,9 @@ def edit():
 	cur.close()
 	return render_template('edit.html',food=Food)
 
+
 @app.route('/<id_1>/edit',methods=['GET', 'POST'])
+@login_required
 def edit_rec(id_1):
 	if request.method == 'GET':
 		cur=con.cursor()
@@ -127,7 +145,9 @@ def edit_rec(id_1):
 		return(redirect(url_for("edit")))
 	return render_template('edit_rec.html',food=Food, Food_types=Food_types)
 
+
 @app.route('/<id_1>/del',methods=['GET', 'POST'])
+@login_required
 def del_rec(id_1):
 	cur=con.cursor()
 	cur.execute("DELETE from Food where id=?",(id_1,))
