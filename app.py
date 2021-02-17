@@ -1,4 +1,5 @@
-from flask import Flask, session, render_template, request, abort, redirect, url_for, flash
+from flask import Flask, session, render_template, request, abort, redirect, url_for, flash, send_from_directory
+import os
 from functools import wraps
 from flask_bcrypt import generate_password_hash, check_password_hash
 import sqlite3
@@ -9,6 +10,11 @@ app = Flask(__name__)
 
 SECRET_KEY = 'X8jdfhjfdhuuueppqxnniwigrewyvz;zziuIEYVIWEI77IVuvvIUI7TyO6d'
 app.config.from_object(__name__)
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                          'favicon.ico',mimetype='image/vnd.microsoft.icon')
 
 def login_required(f):
 	@wraps(f)
@@ -156,4 +162,4 @@ def del_rec(id_1):
 	return redirect(url_for("edit"))
 
 if __name__ == '__main__':
-    app.run(port=3000, host='0.0.0.0',debug=True)
+    app.run(port=3000, host='0.0.0.0',debug=False)
